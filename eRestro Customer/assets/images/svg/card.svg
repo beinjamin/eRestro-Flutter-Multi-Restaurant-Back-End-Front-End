@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="card" transform="translate(16510 5738)">
+    <rect id="Rectangle_17446" data-name="Rectangle 17446" width="24" height="24" transform="translate(-16510 -5738)" fill="none"/>
+    <g id="Mastercard-Logo.wine" transform="translate(-16510 -5733.418)">
+      <path id="rect887" d="M4.567.859h7.141V12.522H4.567Z" transform="translate(3.864 0.727)" fill="#ff5f00"/>
+      <path id="path889" d="M9.167,7.417A7.4,7.4,0,0,1,12,1.587,7.417,7.417,0,1,0,12,13.25,7.4,7.4,0,0,1,9.167,7.417Z" transform="translate(0 0.001)" fill="#eb001b"/>
+      <path id="path891" d="M12.681,6.64V6.4h.1V6.352h-.245V6.4h.1V6.64Zm.476,0V6.352h-.074L13,6.558l-.087-.206h-.074V6.64h.054V6.422l.08.188h.056l.08-.188V6.64Z" transform="translate(10.61 5.375)" fill="#f79e1b"/>
+      <path id="path893" d="M18.5,7.419a7.417,7.417,0,0,1-12,5.83,7.417,7.417,0,0,0,0-11.663,7.417,7.417,0,0,1,12,5.83Z" transform="translate(5.5 0)" fill="#f79e1b"/>
+    </g>
+  </g>
+</svg>

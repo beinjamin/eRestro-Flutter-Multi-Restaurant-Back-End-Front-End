@@ -1,0 +1,513 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+*{--panel-color:#c74240;}
+.active>i.nav-icon {
+    color: white !important;
+}
+
+.msg_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+.msg_error>p:last-child,
+.iziToast-message>p:last-child {
+    margin-bottom: 0;
+}
+
+.msg_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+.info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+.level-1 {
+    padding-left: 12px;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: rgb(26, 26, 27);
+    z-index: 9999;
+    text-align: center;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 48%;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pro_loose {
+    display: none;
+}
+
+.move {
+    cursor: move;
+}
+
+.view input {
+    pointer-events: none;
+}
+
+.view select {
+    pointer-events: none;
+}
+
+.view .btn {
+    display: none;
+}
+
+.custom-checkbox {
+    transform: scale(2);
+}
+
+.view .card-footer {
+    display: none !important;
+}
+
+.grow img {
+    transition: ease;
+    transition-duration: 150ms;
+}
+
+.grow img:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: ease;
+    transition-duration: 150ms;
+}
+
+.time-line-box {
+    /*height: 10px; */
+    padding: 10px 0 36px 0;
+    width: 100%;
+}
+
+.time-line-box .timeline {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    text-align: center;
+}
+
+.time-line-box .timestamp {
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-line-box .status {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #455EFC;
+    position: relative;
+    transition: all 200ms ease-in;
+}
+
+.time-line-box .status span {
+    padding-top: 8px;
+}
+
+.time-line-box .status span:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #455EFC;
+    border-radius: 12px;
+    border: 2px solid #455EFC;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all 200ms ease-in;
+}
+
+.swiper-container {
+    width: 95%;
+    margin: auto;
+    overflow-y: auto;
+}
+
+.swiper-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+.swiper-container::-webkit-scrollbar-track {
+    background: #a8a8a8b6;
+}
+
+.swiper-container::-webkit-scrollbar {
+    height: 2px;
+}
+
+.swiper-container::-webkit-scrollbar-thumb {
+    background: #4F4F4F !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    height: 100%;
+    position: relative;
+}
+
+.image-upload-div {
+    line-height: 150px;
+    vertical-align: middle;
+}
+
+.image-upload-div img {
+    max-width: 100%;
+    vertical-align: middle;
+    max-height: 200px;
+}
+
+.product-image {
+    max-width: 80px !important;
+}
+
+
+/*
+.printme {
+  display: none;
+}*/
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #section-not-to-print,
+    #section-not-to-print * {
+        display: none;
+    }
+
+    #section-to-print,
+    #section-to-print * {
+        visibility: visible;
+    }
+
+    #section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.preview-thumbnail.nav-tabs {
+    border: none;
+    margin-top: 15px;
+}
+
+.preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%;
+}
+
+.preview-thumbnail.nav-tabs li img {
+    max-width: 100%;
+    display: block;
+    margin-top: 4px;
+}
+
+.preview-thumbnail.nav-tabs li a {
+    padding: 0;
+    margin: 0;
+}
+
+.preview-thumbnail.nav-tabs li:last-of-type {
+    margin-right: 0;
+}
+
+.l1 {
+    padding-left: 10px;
+}
+
+.l2 {
+    padding-left: 20px;
+}
+
+.l3 {
+    padding-left: 40px;
+}
+
+.l4 {
+    padding-left: 60px;
+}
+
+.l5 {
+    padding-left: 80px;
+}
+
+.l6 {
+    padding-left: 90px;
+}
+
+.l7 {
+    padding-left: 90px;
+}
+
+.os-theme-light>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+    background: rgb(2 2 2 / 40%) !important;
+}
+
+.text_editor {
+    width: 100%;
+    height: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.w-10px {
+    width: 10px
+}
+
+.chart-height {
+    height: 439.117px;
+}
+
+.piechat_height {
+    width: 100%;
+    height: 350px;
+}
+
+.category-tree-container {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.order-container {
+    overflow: scroll;
+    max-height: 500px;
+}
+
+.variants_process .form-control:disabled,
+.form-control[readonly] {
+
+    background-color: #ffffff;
+    opacity: 1;
+
+}
+
+.icon-link-remove {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background: white;
+    color: #ff0000;
+}
+
+.login-logo a img {
+    max-height: 150px;
+}
+
+.error {
+    color: #D8000C;
+}
+
+.modal {
+    overflow-y: auto;
+}
+
+.cart-product-image {
+    display: block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    height: 130px;
+    width: 130px;
+}
+
+.direct-chat-text {
+    width: fit-content;
+}
+
+.right .direct-chat-text {
+    float: right;
+}
+
+.direct-chat-timestamp {
+    margin: 0 10px;
+}
+
+.direct-chat-text {
+    margin: 5px 0 0 10px;
+}
+
+.right .direct-chat-text {
+    margin-right: 10px;
+}
+
+.direct-chat-messages {
+    height: 384px;
+}
+
+.striped-price {
+    color: red;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 3px;
+    text-decoration: line-through;
+}
+
+.day {
+    height: 44px;
+}
+
+#label {
+    float: left;
+    min-width: 80px;
+}
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+
+
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+.map-div {
+    height: 300px;
+}
+
+#map-canvas {
+    box-sizing: border-box;
+    height: 900px;
+    width: 100%;
+}
+
+.order-product-image{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.order-product-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.navbar-info {
+    background-color: var(--panel-color);
+    color: #fff;
+}
+
+.sidebar-dark-info .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-info .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: var(--panel-color);
+    color: #fff;
+}
+
+.navbar-dark {
+    border-color: var(--panel-color);
+}
+
+.dark-mode .navbar-info {
+    background-color: var(--panel-color);
+    color: #fff;
+}
+
+.dark-mode .sidebar-dark-info .nav-sidebar>.nav-item>.nav-link.active, .dark-mode .sidebar-light-info .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: var(--panel-color);
+    color: #fff;
+}
+
+.dark-mode .select2-selection {
+    background-color: #343a40!important;
+    border-color: #6c757d!important;
+}
+
+.dark-mode .tagify__input::before {
+    color: #fff;
+}

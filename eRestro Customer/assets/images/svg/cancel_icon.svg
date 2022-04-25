@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="cancel_icon" transform="translate(16857 5822)">
+    <rect id="Rectangle_17437" data-name="Rectangle 17437" width="24" height="24" transform="translate(-16857 -5822)" fill="none"/>
+    <rect id="Rectangle_17429" data-name="Rectangle 17429" width="24" height="24" rx="12" transform="translate(-16857 -5822)" fill="#2c272e"/>
+    <path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M17.513,16.322l3.6-3.6a.843.843,0,0,0-1.192-1.192l-3.6,3.6-3.6-3.6a.843.843,0,1,0-1.192,1.192l3.6,3.6-3.6,3.6a.843.843,0,1,0,1.192,1.192l3.6-3.6,3.6,3.6a.843.843,0,1,0,1.192-1.192Z" transform="translate(-16861.32 -5826.322)" fill="#fff"/>
+  </g>
+</svg>

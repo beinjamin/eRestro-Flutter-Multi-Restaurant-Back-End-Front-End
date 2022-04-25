@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>eRestro Documentation</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="eRestro Documentation">
+    <meta name="author" content="eRestro Documentation">
+    <link rel="shortcut icon" href="assets/images/logo-erestro.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <style>
+        .image-doc {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .twenty {
+            height: 20px;
+        }
+
+        .title-img {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="#section-1"><img class="logo-icon me-2"
+                                src="assets/images/logo/logo.png" alt="logo"><span class="logo-text"><span
+                                    class="text-alt">Documentation</span></span></a></div>
+
+                </div>
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1"><img
+                                src="assets/images/logo-erestro.png" class="twenty" alt="">&nbsp; What is eRestro?</a>
+                    </li>
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2">
+                            <span class="theme-icon-holder me-2"><i
+                                    class="fas fa-arrow-down"></i></span>Installation</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-10"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Common issues</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1"><i class="fas fa-cog"></i> &nbsp;
+                            404 Code Found?</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2"><i class="fas fa-cog"></i> &nbsp;
+                        Not Settling Payments to Partners while deliver the order?</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3"><i class="fas fa-cog"></i> &nbsp;
+                            Added product but not showing?</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-4"><i class="fas fa-cog"></i> &nbsp;
+                            Not installing?</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-5"><i class="fas fa-cog"></i> &nbsp;
+                            SMTP Email notification not working?</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-6"><i class="fas fa-cog"></i> &nbsp;
+                            Push notification not working?</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-7"><i class="fas fa-cog"></i> &nbsp;
+                            Invalid Hash Error?</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9">
+                            <span class="theme-icon-holder me-2"><i class="fas fa-key"></i></span>Configure Google API
+                            KEY</a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Configure eRestro</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1"><i class="fas fa-cog"></i> &nbsp;
+                            System Settings</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2"><i class="fas fa-heartbeat"></i>
+                            &nbsp;
+                            System Health</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3"><i class="fas fa-envelope"></i>
+                            &nbsp; Email Settings</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-4"><i
+                                class="fa fa-bell nav-icon "></i>
+                            &nbsp; Notification Settings</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-5"><i class="fa fa-phone-alt"></i>
+                            &nbsp; Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-6"><i
+                                class="fas fa-info-circle"></i>
+                            &nbsp; About us</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-7"><i
+                                class="fas fa-user-secret"></i> &nbsp; Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-8"><i
+                                class="fa fa-exclamation-triangle"></i> &nbsp; Rider Policies</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-9"><i
+                                class="fas fa-file-signature"></i> &nbsp; Restaurant Policies</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-10"><i class="fa fa-key"></i> &nbsp;
+                            Client Api Keys</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-11"><i class="fa fa-chart-area"></i> &nbsp;
+                        Delivarable City Area</a></li>
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Payment
+                            Gateway</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1"><img
+                                src="assets/images/stripe.png" class="twenty" alt="">&nbsp; Stripe</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2"><img
+                                src="assets/images/razorpay.png" class="twenty" alt="">&nbsp; Razorpay</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">
+                            <img src="assets/images/paystack.png" class="twenty" alt="">&nbsp; Paystack</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">
+                            <img src="assets/images/paypal.png" class="twenty" alt="">&nbsp; Paypal</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-5">
+                            <img src="assets/images/flutterwave.png" class="twenty" alt="">&nbsp; Flutterwave </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-6">
+                            <img src="assets/images/paytm.png" class="twenty" alt="">&nbsp; Paytm </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-7">
+                            <img src="assets/images/cod.png" class="twenty" alt="">&nbsp; COD </a>
+                    </li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Tabs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1"><i class="fas fa-home"></i>
+                            &nbsp; Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2"><i
+                                class="fas fa-shopping-cart"></i>
+                            &nbsp; Orders</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3"><i class="fas fa-bullseye"></i>
+                            &nbsp; Categories</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-4"><i class="fas fa-tag"></i>
+                            &nbsp; Tags</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5"><i class="fas fa-store"></i>
+                            &nbsp; Restaurants</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-6"><i class="fas fa-cubes"></i>
+                            &nbsp; Products</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-7"><i class="fas fa-icons"></i>
+                            &nbsp; Media</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-8"><i class="fas fa-image"></i>
+                            &nbsp; Sliders</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-9"><i class="fas fa-image"></i>
+                            &nbsp; Offers</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-10"><i
+                                class="fas fa-ticket-alt"></i>
+                            &nbsp; Support Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-11"><i
+                                class="fas fa-puzzle-piece"></i>
+                            &nbsp; Promo Code</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-12"><i
+                                class="fas fa-layer-group"></i>
+                            &nbsp; Featured Sections</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-13"><i class="fas fa-user"></i>
+                            &nbsp; Customer</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-14"><i
+                                class="fas fa-id-card-alt"></i>
+                            &nbsp; Riders</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-15"><i
+                                class="fas fa-money-bill-wave"></i>
+                            &nbsp; Payment Request</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-16"><i
+                                class="fas fa-paper-plane"></i>
+                            &nbsp; Send Notification</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-17"><i
+                                class="fas fa-map-marked-alt"></i>
+                            &nbsp; Location</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-18"><i
+                                class="fas fa-question-circle"></i>
+                            &nbsp; FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-19"><i class="fas fa-user-tie"></i>
+                            &nbsp; System Users</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>APIs</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-comment"></i></span>Support</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span
+                                class="theme-icon-holder me-2"><i class="fab fa-autoprefixer"></i></span>Auto Update</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Introduction
+                        </h1>
+                        <section class="docs-intro">
+                            <p> An eRestro(online food ordering system) will make it possible for you to sell your foods
+                                digitally without the involvement
+                                of any external portals or the need to pay commission. eRestro provides the possibility
+                                of placing orders on your appliation
+                                (and you don’t need any technical skills or help from IT specialists), which will enable
+                                your customers to place orders for delivery.
+                            </p>
+                        </section>
+                    </header>
+                    <section class="docs-section" id="item-1-1">
+
+                        <h2 class="section-heading">What is eRestro?</h2>
+                        <p> The <strong> eRestro </strong> system will make it possible to purchase meals through
+                            Application.
+                            This is an additional sales channel that will increase the number of orders carried out at
+                            your eatery.
+                            It is great way to attract customers near you.
+                        </p>
+                        <p>
+                            An <strong> eRestro </strong> for you. Open up to new opportunities and win clients and
+                            Restaurants online - on this system and in applications.
+                        </p>
+                        <p>
+                            In this system, New restaurants can register on system and Super admin can accept or rejct
+                            according to details.
+                            Super Admin will get commission per Restaurant.
+                            Super admin can add delivery boy for order delivery and set multiple commission methods.
+                        </p>
+                    </section>
+                </article>
+
+                <article class="docs-article" id="section-2">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Installation</h1>
+                        <section class="docs-intro">
+                            <p>
+                                <ol>
+                                    <li>
+                                        Login into your cPanel.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-1.png">
+
+                                            <img src="assets/images/cp-1.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Go to database in your cPanel
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-2.png">
+
+                                            <img src="assets/images/cp-2.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Enter database name and Create a new database.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-3.png">
+
+                                            <img src="assets/images/cp-3.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Create Database user.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-4.png">
+
+                                            <img src="assets/images/cp-4.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Assign Database to the user.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-5.png">
+
+                                            <img src="assets/images/cp-5.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Open File manager now.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-6.png">
+
+                                            <img src="assets/images/cp-6.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Go to public_html or public_html/yourDomain.in folder in the file manager,
+                                        whichever folder your domain points to.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-7.png">
+
+                                            <img src="assets/images/cp-7.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        Upload the downloaded zip in public_html or public_html/yourDomain.in folder.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-8.png">
+                                            <img src="assets/images/cp-8.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        unzip or extract the <b>Code vX.X - upload this on server.zip</b> file that you
+                                        have just uploaded.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-9.png">
+                                            <img src="assets/images/cp-9.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        verify that all these files are in public_html or public_html/yourDomain.in
+                                        folder.
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/cp-10.png">
+                                            <img src="assets/images/cp-10.png" class="image-doc">
+                                        </a>
+                                    </div>
+                                    <li>
+                                        visit http://yourDomain.in/install
+                                    </li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/install.png">
+                                            <img src="assets/images/install.png" class="image-doc">
+                                        </a>
+                                    </div>
+                            </p>
+                            </ol>
+                            <p> After following the above steps you have successfully created a Database, User for the
+                                Database, and uploaded Ready to Install files. Kindly gather that database information
+                                and fill in the form as suggested.
+                                <ol>
+                                    <li>
+                                        Database Hostname : Enter the hostname.
+                                    </li>
+                                    <li>
+                                        Database Username : Enter the username that have access to the database.
+                                    </li>
+                                    <li>
+                                        Database Password : Enter the password.
+                                    </li>
+                                    <li>
+                                        Database Name : Enter the name of database.
+                                    </li>
+                                    <li>
+                                        Admin Mobile : Enter the mobile number (The mobile number will be used further
+                                        for
+                                        user authentication)
+                                    </li>
+                                    <li>
+                                        Admin Password : Enter the password number(The password will be used further for
+                                        user authentication)
+                                    </li>
+                                </ol>
+                            </p>
+                            <p>
+                                Now click Install. Thats it! You are ready to run your App :
+                                http://yourDomain.in/
+                            </p>
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>In order to VPS and NGINX Based System, you have to setup the code using commands
+                                        and .htaccess file based on your server.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </header>
+                </article>
+                <article class="docs-article" id="section-10">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Common issues (Server Specific)</h1>
+                        <section class="docs-intro" id="item-6-1">
+                            <h2 class="section-heading">404 Code Found?</h2>
+                            <p>
+                                <ol>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/404-error.png">
+                                            <!-- media -->
+                                            <img src="assets/images/404-error.png" class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <li>Your <strong> .htaccess </strong> file is missing at your server. </li>
+                                    <li>To resolve that open zip file which you have downloaded from codecanyon.</li>
+                                    <li>Unzip this file Code <strong> vX.X - upload this to server </strong> </li>
+                                    <li>Open that folder and you will get <strong>.htaccess</strong> file</li>
+                                    <li>Upload that file on main folder.</li>
+                                </ol>
+                            </p>
+                        </section>
+                        <section class="docs-intro" id="item-6-2">
+                            <h2 class="section-heading">Not Settling Payments to Partners while deliver the order?</h2>
+                            <p>
+                                <ol>
+                                    <li>Check that you have set the <strong> Cron job </strong> on your server.</li>
+                                    <li>Note: if you are not aware of cron job then you can ask your server for
+                                        help or documentation.</li>
+                                    <li>For more details of commission method you will find guidance on bottom
+                                        of System -> System Settings page. </li>
+                                    <li>This cron job is automatic system for payment Settling. If you want to do it
+                                        manually then we have that option too.</li>
+                                    <li>Go to Partners -> Partners Manu</li>
+                                    <li>Click on <strong>Settle Partner Payment</strong> Button for settlement of
+                                        partner payments.See below image :</li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/manual-settle.png">
+                                            <img src="assets/images/manual-settle.png" class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                </ol>
+                            </p>
+                        </section>
+                        <section class="docs-intro" id="item-6-3">
+                            <h2 class="section-heading">Added product but not showing?</h2>
+                            <p>
+                                <ol>
+                                    <li>Check that if partner has added then admin need to activate that product.</li>
+                                    <li>Check your <strong> only_full_group_by_mode </strong> at your server. it has to
+                                        be disable.</li>
+                                    <li>If you are having this <strong>only_full_group_by_mode</strong> issue then this
+                                        is your server side issue. please ask your server support to disable this
+                                        only_full_group_by_mode at PHPMyAdmin(mySQL). i hope you will understand this
+                                        simple thing and discuss this with server support.</li>
+                                    <li>Check product is active or de-active. It ahs to be active for display.</li>
+                                </ol>
+                            </p>
+                        </section>
+                        <section class="docs-intro" id="item-6-4">
+                            <h2 class="section-heading">Not installing?</h2>
+                            <p>
+                                <ol>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/install-error.png">
+                                            <!-- media -->
+                                            <img src="assets/images/install-error.png" class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <li>Set all the fields do not set blank in any field.</li>
+                                    <li>Use this same mobile, password and email for the installation. You can change
+                                        password from profile section.</li>
+                                    <li>And if you want to change mobile then you need to run the query on your
+                                        MySQL(PhpMyAdmin).</li>
+                                    <li>Steps to run this query:</li>
+                                    <ol>
+                                        <li>Open PhpMyAdmin on your server. select your databse and table.</li>
+                                        <div class="simplelightbox-gallery">
+                                            <a href="assets/images/users-list.png">
+                                                <!-- media -->
+                                                <img src="assets/images/users-list.png" class="image-doc" alt="">
+                                            </a>
+                                        </div>
+                                        <li>Open Users table.</li>
+                                        <li>Click on SQL tab</li>
+                                        <div class="simplelightbox-gallery">
+                                            <a href="assets/images/sql-tab.png">
+                                                <!-- media -->
+                                                <img src="assets/images/sql-tab.png" class="image-doc" alt="">
+                                            </a>
+                                        </div>
+                                        <li>Copy this following query and paste in that sql tab page
+                                            <code>UPDATE `users` SET `mobile` = 'YOUR_MOBILE_NUMBER' WHERE `users`.`id`
+                                                = 1;</code>
+                                        </li>
+                                        <li>And Click on <strong> GO </strong> Button to run that query. See the image
+                                            below:</li>
+                                        <div class="simplelightbox-gallery">
+                                            <a href="assets/images/run-query.png">
+                                                <!-- media -->
+                                                <img src="assets/images/run-query.png" class="image-doc" alt="">
+                                            </a>
+                                        </div>
+                                    </ol>
+                                </ol>
+                            </p>
+                        </section>
+                        <section class="docs-intro" id="item-6-5">
+                            <h2 class="section-heading">SMTP Email notification not working?</h2>
+                            <p>
+                                <ol>
+                                    <li>You have to setup the email settings on panel.You can see below image.</li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/email-settings.png">
+                                            <!-- media -->
+                                            <img src="assets/images/email-settings.png" class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <li>You can test your SMTP configuration here <a
+                                            href="https://www.gmass.co/smtp-test" target="_BLANK"><i
+                                                class="fa fa-link"></i></a></li>
+                                </ol>
+                            </p>
+                        </section>
+                        <section class="docs-intro" id="item-6-6">
+                            <h2 class="section-heading">Push notification not working?</h2>
+                            <p>
+                                <ol>
+                                    <li>Setup FCM Server Key</li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/notification-settings.png">
+                                            <!-- media -->
+                                            <img src="assets/images/notification-settings.png" class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <li>If still its not working then logout the app, then login the app and check the
+                                        notification.</li>
+                                </ol>
+                            </p>
+                        </section>
+                        <section class="docs-intro" id="item-6-7">
+                            <h2 class="section-heading">Invalid Hash Error?</h2>
+                            <p>
+                                <ol>
+                                    <li>Check that you have created the Client Api Keys for your application. Here,</li>
+                                    <div class="simplelightbox-gallery">
+                                        <a href="assets/images/clients-api-keys.png">
+                                            <!-- media -->
+                                            <img src="assets/images/clients-api-keys.png" class="image-doc" alt="">
+                                        </a>
+                                    </div>
+                                    <li>Set that secret key at application side.</li>
+                                    <li>It should be same on both side application and Admin panel side.</li>
+                                </ol>
+                            </p>
+                        </section>
+                    </header>
+                </article>
+                <article class="docs-article" id="section-9">
+
+                    <section class="docs-section" id="item-9-1">
+                        <h2 class="section-heading">Configure Google API KEY</h2>
+                        <ol>
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>To use Google Map functionality, you need to create <strong>Google Map API
+                                            Key</strong>.This Map used in accessing all locations and area validation
+                                        for order delivarable.</p>
+                                </div>
+                            </div>
+                            <li>Setup your Google Map API KEY </li>
+                            <li>Usage of Google Map API Key:</li>
+                            <ul>
+                                <li>Location of Restaurant</li>
+                                <li>Setting delivrable area in city.</li>
+                                <li>Calculating delivery charge on the basis of distance between customer and
+                                    restaurant. So, the distance will calculate by using the Google DistanceMatrix API.
+                                </li>
+                                <li>Adding address by selecting the map pin from customer application.</li>
+                            </ul>
+                            <iframe width="100%" height="450" src="https://www.youtube.com/embed/2_HZObVbe-g"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <div class="callout-block callout-block-danger">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>After creating the GOOGLE API KEY for map and other work.Please do Restriction on
+                                        that APi key by following the documentation provided by google. <a
+                                            href="https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key"
+                                            target="_BLANK">Restrict API KEY</a></p>
+                                </div>
+                            </div>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/google-api-key.png">
+                                    <!-- settings done-->
+                                    <img src="assets/images/google-api-key.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <ul>
+                                <li>Google Map API KEY : You have to create Google Map API KEY. We have separate menu
+                                    for setup. this API key Here you can check
+                                    documentation for that. <a
+                                        href="https://developers.google.com/maps/documentation/javascript/get-api-key"
+                                        target="_BLANK"><i class="fa fa-link"></i></a>
+                                    <p>Please do carefully. you need to follow documentation properly. </p>
+                                    <p class="text text-primary"> You need to enable 1) Places, &
+                                        2)distanceMatrix these APIs</p>
+                                    <p>Visit this documentation for enable or disable the APIs <a
+                                            href="https://support.google.com/googleapi/answer/6158841?hl=en"
+                                            target="_BLANK">Here</a></p>
+                                    <p>Visit this documentation for API Restricting for security. <a
+                                            href="https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key"
+                                            target="_BLANK">Here</a></p>
+                                    <p>Then, Set created API KEY on System -> System Settings -> <strong> Google Map API
+                                            KEY</strong> </p>
+                                </li>
+                            </ul>
+                        </ol>
+                    </section>
+                </article>
+                <article class="docs-article" id="section-5">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Configure eRestro</h1>
+                        <section class="docs-intro">
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>In order to Configure eRestro you must have Admin Account.</p>
+                                </div>
+                            </div>
+                            <p>
+                                Use the given guide to configure eRestro.
+                            </p>
+                            <p>
+                                Login as admin by
+                            </p>
+                            <ol>
+                                <li>Login the system with default credentials
+                                    <p>Mobile : 9876543210</p>
+                                    <p>Password : 12345678</p>
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/login.png">
+                                        <!-- login page -->
+                                        <img src="assets/images/login.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Great! You have logged in as Super Admin.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/dashboard.png">
+                                        <!-- home page -->
+                                        <img src="assets/images/dashboard.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Open <strong> System </strong> menu. </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/settings.png">
+                                        <!-- System page -->
+                                        <img src="assets/images/settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </section>
+                    </header>
+                    <section class="docs-section" id="item-5-1">
+                        <h2 class="section-heading">System Settings</h2>
+
+                        <ol>
+                            <li>General Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/general-settings.png">
+                                    <!-- settings done-->
+                                    <img src="assets/images/general-settings.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <ul>
+                                <li>App Name : Enter your System name.</li>
+                                <li>Support Number : Enter your System Support Number for any query.</li>
+                                <li>Support Email : Enter your Support Email.On this email you will receive all the
+                                    notifications.</li>
+                                <li>System Currency : Set your System Currency.</li>
+                                <li>System Timezone : Set your System Timezone according to your country.</li>
+                                <li>Google Map API KEY : You have to create Google Map API KEY. We have separate menu
+                                    for setup. this API key Here you can check
+                                    documentation for that <a
+                                        href="https://developers.google.com/maps/documentation/javascript/get-api-key"
+                                        target="_BLANK"><i class="fa fa-link"></i></a>
+                                    <p>Please do carefully. you need to follow documentation properly. </p>
+                                    <p class="text text-primary"> You need to enable 1) places, 2)drawing, &
+                                        3)distancematrix these APIs</p>
+                                    <p>Visit this documentation for enable or disable the APIs <a
+                                            href="https://support.google.com/googleapi/answer/6158841?hl=en"
+                                            target="_BLANK"><i class="fa fa-link"></i></a></p>
+                                </li>
+                                <li>Email Notification : Email notification on system email, restaurant email and
+                                    customer email will enable or disable by this settings.</li>
+                                <li>Logo : Set your System Logo.</li>
+                                <li>Favicon : Set your System Favicon.</li>
+                            </ul>
+                            <li>Application Version Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/app-system-settings.png">
+                                    <!-- version settings done-->
+                                    <img src="assets/images/app-system-settings.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <p>This settign is use for manage system version on application and admin panel side. </p>
+                            <li>Cart Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/cart-settings.png">
+                                    <!-- cart settings done-->
+                                    <img src="assets/images/cart-settings.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <ul>
+                                <li>Minimum Cart Amount : User have to add item in cart atleast minimum amount.</li>
+                                <li>Maximum Items Allowed In Cart : Maximum number of items user can add items in cart.
+                                </li>
+                                <li>Low stock limit : Set number of stock limit that you can see number of product are
+                                    out of stock when perticular product will reach that limit.You can see that Low
+                                    stock product count on Admin dashboard.</li>
+                            </ul>
+                            <li>Delivery Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/delviery-settings.png">
+                                    <!-- cart settings done-->
+                                    <img src="assets/images/delviery-settings.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>App & System Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/app-system-settings.png">
+                                    <!-- app settings done-->
+                                    <img src="assets/images/app-system-settings.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Refer & Earn Settings</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/refer-earn.png">
+                                    <!-- refer earn  settings done-->
+                                    <img src="assets/images/refer-earn.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <ul>
+                                <li>Refer & Earn Status: You can enable or disable the refer & earn system</li>
+                                <li>Minimum Refer & Earn Order Amount: minimum order amount to apply this system </li>
+                                <li>Refer & Earn Method: you can select method percentage(%) or flat amount for bonus
+                                </li>
+                                <li>Refer & Earn Bonus: as you select method you can set amount or number as you want.
+                                </li>
+                                <li>Maximum Refer & Earn Amount: You can also set maximum amount for bonus if bonus
+                                    amount will increase this maximum amount then user will get this maximum amount as
+                                    bonus. </li>
+                                <li>Number of times Bonus to be given to the customer: You can also set number of time
+                                    user can get bonus as per he/she place an order. </li>
+                                <li>Note: Customer will get bonus in his wallet as his order will delviered
+                                    successfully. </li>
+                            </ul>
+                        </ol>
+                    </section>
+                    <section class="docs-section" id="item-5-2">
+                        <h2 class="section-heading">System Health</h2>
+                        <p>Here you can check which module is enable or disabled on your system and server. You can see
+                            the status or health of system</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/system-health.png">
+                                <!-- system helth image done -->
+                                <img src="assets/images/system-health.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-3">
+                        <h2 class="section-heading">Email Settings</h2>
+                        <p>
+                            Configure Email settings.
+                            Just go to Settings -> Email(SMTP) settings.
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/email-settings.png">
+                                <!-- email setting page done -->
+                                <img src="assets/images/email-settings.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <p>You can check your SMTP Email settings at this URL <a href="https://www.gmass.co/smtp-test"
+                                target="_BLANK"><i class="fa fa-link"></i></a> </p>
+                        <ol>
+                            <li>Type the host name.</li>
+                            <li>Type SMTP user name. </li>
+                            <li>Type SMTP Password.</li>
+                            <li>Enter SMTP Port no.</li>
+                            <li>Select SMTP Encryption Type</li>
+                            <li>Select Mail type (HTML,TEXT)</li>
+                        </ol>
+                    </section>
+
+                    <section class="docs-section" id="item-5-4">
+                        <h2 class="section-heading">Notification Settings</h2>
+                        <p>
+                            Configure Notification Settings from firebase console for application push notification.
+                            Just go to System -> Notification Settings.
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/notification-settings.png">
+                                <!-- notifcation setting page done -->
+                                <img src="assets/images/notification-settings.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+                    <section class="docs-section" id="item-5-5">
+                        <h2 class="section-heading">Contact us</h2>
+                        <p>
+                            Configure Contact us settings.
+                            Just go to System -> Contact us.
+                        </p>
+                        <ol>
+                            <li>Enter all Contact us under Contact us section.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <!-- contact us page done -->
+                            <a href="assets/images/contact-us.png">
+                                <img src="assets/images/contact-us.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-6">
+                        <h2 class="section-heading">About us</h2>
+                        <p>
+                            Configure About us settings.
+                            Just go to System -> About us.
+                        </p>
+                        <ol>
+                            <li>Enter all About us under About us section.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <!-- about us page done -->
+                            <a href="assets/images/about-us.png">
+                                <img src="assets/images/about-us.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-7">
+                        <h2 class="section-heading">Privacy Policy And Terms & Conditions</h2>
+                        <p>
+                            Configure Privacy Policy And Terms & Conditions settings for customer application.
+                            Just go to System -> Privacy Policy.
+                        </p>
+                        <ol>
+                            <li>Enter all Privacy Policy And Terms & Conditions details accordingly. </li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/privacy-policy.png">
+                                <!-- privacy policy image done -->
+                                <img src="assets/images/privacy-policy.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-8">
+                        <h2 class="section-heading">Rider Policies And Terms & Conditions</h2>
+                        <p>
+                            Configure Privacy Policy And Terms & Conditions.
+                            Just go to System -> Rider Policies.
+                        </p>
+                        <ol>
+                            <li>Enter all Privacy Policy And Terms & Conditions under Privacy Policy And Terms &
+                                Conditions section accordingly.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/rider-privacy-policy.png">
+                                <!-- rider privacy policy done-->
+                                <img src="assets/images/rider-privacy-policy.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+                    <section class="docs-section" id="item-5-9">
+                        <h2 class="section-heading">Restaurant Policies And Terms & Conditions</h2>
+                        <p>
+                            Configure Privacy Policy And Terms & Conditions.
+                            Just go to System -> Restaurant Policies.
+                        </p>
+                        <ol>
+                            <li>Enter all Privacy Policy And Terms & Conditions under Privacy Policy And Terms &
+                                Conditions section accordingly.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/restaurant-privacy-policy.png">
+                                <!-- Restaurant privacy policy done -->
+                                <img src="assets/images/restaurant-privacy-policy.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-10">
+                        <h2 class="section-heading">Client Api Keys</h2>
+                        <p>
+                            Configure Client Api Keys settings.You have to create one secret key for Security Token.You
+                            have to set this key at application also.
+                            Just go to System -> Client Api Keys.
+                        </p>
+                        <ol>
+                            <li>Enter Client Name field.</li>
+                            <li>Click on Add Client API.</li>
+                            <li>Reload the page and you will see the added details at following table.There you can
+                                active or deactive the key.</li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="assets/images/clients-api-keys.png">
+                                <!-- clcient imag done -->
+                                <img src="assets/images/clients-api-keys.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+                    <section class="docs-section" id="item-5-11">
+                        <h2 class="section-heading">Delivarable City Area</h2>
+                        <p>
+                            Configure Delivarable City Area at <strong>Location -> Deliverable Area</strong>.
+                        </p>
+                        <ol>
+                            <li>Before configure the city area you have to add city in which you are going to delivery the online food.As you see following image there you can add city <strong>Location -> City</strong></li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/manage-city.png">
+                                    <!-- clcient imag done -->
+                                    <img src="assets/images/manage-city.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>For more details about this you can see City Tab explanation. <a class="nav-link scrollto" href="#item-3-17"><i
+                                class="fas fa-map-marked-alt"></i>
+                            &nbsp; Here</a> </li>
+                            <li>After adding the city go to <strong>Location -> Deliverable Area</strong></li>
+                            <li>Here, You need to select the city in which you want to set the delivarable area.You can see following image.</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/city-area.png">
+                                    <!-- clcient imag done -->
+                                    <img src="assets/images/city-area.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>Here note the point that you can set city area approximately. </li>
+                            <li>If you have already set area for perticular city then it will show the drawing or shape that you have made for that city.</li>
+                            <li>You can change the area by drawing the new shape.</li>
+                            <li>Also use some action button we have given above map. See the following image.</li>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/map-operations.png">
+                                    <!-- clcient imag done -->
+                                    <img src="assets/images/map-operations.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                            <li>We have 3 buttons
+                                <ul>
+                                    <li>Remove Newly Added Line : You can remove new Drawed shape.</li>
+                                    <li>Clear Map : You can clear all the shape you have drawed.</li>
+                                    <li>Restore Old Map : You can Restore the old saved shape of city which you have saved in database.</li>
+                            </ul>
+                            </li>
+
+                        </ol>
+                    </section>
+                </article>
+                <article class="docs-article" id="section-8">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Payment Gateway Settings.</h1>
+                        <section class="docs-intro">
+                            <p>
+                                Verity of options available for paymemts, just follow the below steps to configure the
+                                payment gateways for eRestro.
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="item-8-1">
+                        <h2 class="section-heading"> Stripe</h2>
+                        <p>
+                            <ol>
+                                <li>Go to <a href="https://dashboard.stripe.com/login" target="_blank">
+                                        https://dashboard.stripe.com/login</a>
+                                    and sign in with your Stripe account</li>
+
+                                <li>Paste all Stripe Credentials here. (system -> Payment Methods)</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/stripe-settings.png">
+                                        <img src="assets/images/stripe-settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-8-2">
+                        <h2 class="section-heading"><img src="assets/images/razorpay.png" class="title-img" alt="">
+                            Razorpay</h2>
+                        <p>
+                            <ol>
+                                <li>Go to <a href="https://dashboard.razorpay.com/app/dashboard" target="_blank">
+                                        https://dashboard.razorpay.com/</a>
+                                    and sign in with your Razorpay account</li>
+
+                                <li>Paste all Razorpay Credentials here. (system -> Payment Methods)</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/razor-pay-settings.png">
+                                        <img src="assets/images/razor-pay-settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-8-3">
+                        <h2 class="section-heading"> <img src="assets/images/paystack.png" class="title-img" alt="">
+                            Paystack</h2>
+                        <p>
+                            <ol>
+                                <li>Go to <a href="https://dashboard.paystack.com/" target="_blank">
+                                        https://dashboard.paystack.com/</a>
+                                    and sign in with your Paystack account</li>
+                                <li>Paste all Paystack Credentials here. (system -> Payment Methods)</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/paystack-settings.png">
+                                        <img src="assets/images/paystack-settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-8-4">
+                        <h2 class="section-heading"> <img src="assets/images/paypal.png" class="title-img" alt="">
+                            Paypal</h2>
+                        <p>
+                            <ol>
+                                <li>Go to <a href="https://www.paypal.com/in/business" target="_blank">
+                                        https://www.paypal.com/in/business</a>
+                                    and sign in with your Paypal account</li>
+                                <li>Paste all Paypal Credentials here. (system -> Payment Methods)</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/paypal-settings.png">
+                                        <img src="assets/images/paypal-settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-8-5">
+                        <h2 class="section-heading"> <img src="assets/images/flutterwave.png" class="title-img" alt="">
+                            Flutterwave</h2>
+                        <p>
+                            <ol>
+                                <li>Go to <a href="https://flutterwave.com/us/" target="_blank">
+                                        https://flutterwave.com/us/</a>
+                                    and sign in with your Flutterwave account</li>
+                                <li>Paste all Flutterwave Credentials here. (system -> Payment Methods)</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/flutterwave-settings.png">
+                                        <img src="assets/images/flutterwave-settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-8-6">
+                        <h2 class="section-heading"> <img src="assets/images/paytm.png" class="title-img" alt="">
+                            Paytm</h2>
+                        <p>
+                            <ol>
+                                <li>Go to <a href="https://business.paytm.com/" target="_blank">
+                                        https://business.paytm.com/</a>
+                                    and sign in with your Paytm account</li>
+                                <li>Paste all Paytm Credentials here. (system -> Payment Methods)</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/paytm-settings.png">
+                                        <img src="assets/images/paytm-settings.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-8-7">
+                        <h2 class="section-heading"> <img src="assets/images/cod.png" class="title-img" alt="">
+                            COD</h2>
+                        <p>
+                            <ol>
+                                <li>Enable or Disable the Cash On Delivery Payment Method. (system -> Payment Methods)
+                                </li>
+                            </ol>
+                        </p>
+                    </section>
+                </article>
+                <article class="docs-article" id="section-6">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Tabs</h1>
+                        <section class="docs-intro">
+                            <p>Informations about all tabs in eRestro</p>
+                        </section>
+                    </header>
+                    <section class="docs-section" id="item-3-1">
+                        <h2 class="section-heading">Dashboard</h2>
+                        <p>
+                            <ol>
+                                <li>Dashboard of the app to view app insights.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/dashboard.png">
+                                        <img src="assets/images/dashboard.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-2">
+                        <h2 class="section-heading">Orders</h2>
+                        <p>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/orders.png">
+                                    <img src="assets/images/orders.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </p>
+                        <p>Order system of eRestro is very simple and easy to manage.</p>
+                        <ol>
+                            <li>Customer will place an order as <strong> Pending</strong></li>
+                            <li>Customer can see their city's restaurant and can order Restaurant delivrable area only.
+                            </li>
+                            <li>Restanurant will <strong>Confirm</strong> the order</li>
+                            <li>Rider will accept or reject the order if he/she will available on that area.</li>
+                            <li>Customer can cancle the order if Perticular item or product will available for
+                                cancellation.</li>
+                            <li>Note: One Rider can delviery only one order at a time.</li>
+                        </ol>
+                    </section>
+
+                    <section class="docs-section" id="item-3-3">
+                        <h2 class="section-heading">Categories</h2>
+                        <p>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/categories.png">
+                                    <img src="assets/images/categories.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </p>
+                        <p>Admin can create/edit/delete/hide/show the categories.</p>
+                        <p>Restanurant can see all categories. So, restaurant can add foods in that categories.</p>
+                    </section>
+                    <section class="docs-section" id="item-3-4">
+                        <h2 class="section-heading">Tags</h2>
+                        <p>
+                            <div class="simplelightbox-gallery">
+                                <a href="assets/images/tags.png">
+                                    <img src="assets/images/tags.png" class="image-doc" alt="">
+                                </a>
+                            </div>
+                        </p>
+                        <p>This tags will used in product tags and restaurant tags also. Admin and Restaurant can create
+                            or edit the tags.</p>
+                        <p>Restanurant will be able to that tags which are created by him only because restaurant can
+                            manage their tags. </p>
+                    </section>
+                    <section class="docs-section" id="item-3-5">
+                        <h2 class="section-heading">Restaurants</h2>
+                        <p>
+                            <ol>
+                                <li>You can manually add Restaurants under Add Restaurants section.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/restaurant.png">
+                                        <img src="assets/images/restaurant.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <ol>
+                                    <li>Admin can add restaurants.And Also Restanurant can register the system and apply
+                                        for partnership. Admin can Approve/Reject the request.</li>
+                                    <li>
+                                        Restaurant Payment System
+                                        <ul>
+                                            <li>Order payments will manage by admin. when order will deliver then
+                                                restaurant will get paid by admin <strong> manually </strong> or by
+                                                server <strong> cron job </strong> file settings </li>
+                                            <li>While admin add restaurant and restaurant will send Request to admin for
+                                                partnership then admin will update the commission for restaurant.</li>
+                                            <li>Note: if you are not aware of cron job then you can ask your server for
+                                                help or documentation.</li>
+                                            <li>For more details of commission method you will find guidance on bottom
+                                                of System -> System Settings page. </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-6">
+                        <h2 class="section-heading">Products</h2>
+                        <p>
+                            <ol>
+                                <li>See all the Products/Foods in this section.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/products.png">
+                                        <img src="assets/images/products.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Before adding the product you need to create attributes for that.</li>
+                                <li>Attributes are just property of food for e.g. Pizza will have attributes like ->
+                                    Size(Regular,Midium,Large,Giant). Here, Size is Attribute. and
+                                    Regular,Midium,Large,Giant are Attribute values</li>
+                                <li>Here You can manage attributes and it's values.</li>
+                                <li>Admin can add/edit/delete/active/de-active the products/foods.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/attributes.png">
+                                        <img src="assets/images/attributes.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Admin can edit or add the attributes. This will be used in products.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-7">
+                        <h2 class="section-heading">Media</h2>
+                        <p>
+                            <ol>
+                                <li>See all Media under Media Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/media.png">
+                                        <img src="assets/images/media.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you need to uplaod all the media which you will use in this system.</li>
+                                <li>you can add food images and restaurant gallary images here so when ou add product
+                                    then you need to just select the Media.</li>
+                                <li>Here you can copy the image path so in future if you need then directly you can get
+                                    access.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-8">
+                        <h2 class="section-heading">Sliders</h2>
+                        <p>
+                            <ol>
+                                <li>See all Sliders under Slider Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/sliders.png">
+                                        <img src="assets/images/sliders.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you can add/edit/delete sliders for home page on customer application.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-9">
+                        <h2 class="section-heading">Offers</h2>
+                        <p>
+                            <ol>
+                                <li>See all Offers under Offer Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/offers.png">
+                                        <!-- media -->
+                                        <img src="assets/images/offers.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you can add/edit/delete offer images.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-10">
+                        <h2 class="section-heading">Support Tickets</h2>
+                        <p>
+                            <ol>
+                                <li>See all Customer Queries under Support Tickets Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/ticket-types.png">
+                                        <img src="assets/images/ticket-types.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Admin need to create ticket type. So user can select the subject of issue.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/tickets.png">
+                                        <img src="assets/images/tickets.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Customer need to create ticket for this if customer have some query and admin will
+                                    answer their questions.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/ticket-message.png">
+                                        <img src="assets/images/ticket-message.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Customer and admin can communicate through the system.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-11">
+                        <h2 class="section-heading">Promo Code</h2>
+                        <p>
+                            <ol>
+                                <li>See all Promo Code under Promo Code Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/promo-code.png">
+                                        <!-- Promo Code -->
+                                        <img src="assets/images/promo-code.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>You need to create promo code and active promo codes will display at appication.
+                                </li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-12">
+                        <h2 class="section-heading">Featured Sections</h2>
+                        <p>
+                            <ol>
+                                <li>See all Featured Sections under Featured Sections Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/featured-section.png">
+                                        <!-- media -->
+                                        <img src="assets/images/featured-section.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you can set feature section for home page of customer application home page.
+                                </li>
+                                <li>Note: To show perfect result of feature section then you need to add more
+                                    products/foods and orders to display products. </li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-13">
+                        <h2 class="section-heading">Customer</h2>
+                        <p>
+                            <ol>
+                                <li>See all Customer under Customer Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/customers.png">
+                                        <!-- customer  -->
+                                        <img src="assets/images/customers.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you will see the list of all customer of system.</li>
+                                <li>You can hide or show perticular customer.</li>
+                                <li>You can see transactions of customer.</li>
+                                <li>You can see the addresses of customers</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-14">
+                        <h2 class="section-heading">Riders</h2>
+                        <p>
+                            <ol>
+                                <li>See all Riders under Riders Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/riders.png">
+                                        <!-- riders -->
+                                        <img src="assets/images/riders.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Admin can add riders from admin panel.</li>
+                                <li>Riders will see the pending list of orders on rider panel and rider application.
+                                </li>
+                                <li>Rider can accept the order if he/she in that perticular area of customer or
+                                    restaurant</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/manage-rider.png">
+                                        <!-- riders -->
+                                        <img src="assets/images/manage-rider.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Admin will set the Serviceable City for rider.</li>
+                                <li>Rider Commission System</li>
+                                <ol>
+                                    <li>Percentage on Delivery Charges</li>
+                                    <ul>
+                                        <li>Rider will get commission on delivery charge of orders when he/she will
+                                            delvier the order.</li>
+                                        <li>Payment will transfer in wallet of rider</li>
+                                    </ul>
+                                    <li>Fixed Commission per Order</li>
+                                    <ul>
+                                        <li>Rider will get fix amount of commission per order when he/she delvier the
+                                            order. </li>
+                                        <li>Payment will transfer in wallet of rider</li>
+                                    </ul>
+                                </ol>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-15">
+                        <h2 class="section-heading">Payment Request</h2>
+                        <p>
+                            <ol>
+                                <li>See all Payment Requests under Payment Request Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/payment-request.png">
+                                        <!-- media -->
+                                        <img src="assets/images/payment-request.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you will see the wallet withdrawal request from restaurants and riders.</li>
+                                <li>Admin need to accept/cancle the request.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-16">
+                        <h2 class="section-heading">Send Notification</h2>
+                        <p>
+                            <ol>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/send-notifications.png">
+                                        <!-- media -->
+                                        <img src="assets/images/send-notifications.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here you can send push notifcation to customer application.</li>
+                                <li>All customers will get this notifications.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-17">
+                        <h2 class="section-heading">Location</h2>
+                        <p>
+                            <ol>
+                                <li>See all Cities under Location->City Manu.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/manage-city.png">
+                                        <!-- media -->
+                                        <img src="assets/images/manage-city.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Add City with all the fields</li>
+                                <ul>
+                                    <li><strong>Time to travel 1 (km) </strong> : Enter time to travel 1 km in city by
+                                        rider. (Here we are caculating the approx deliverable distance from your
+                                        customer and restaurant.)</li>
+                                    <li><strong>Maximum Delivarable Distance </strong> :Enter maximum distance in
+                                        kilometer(KM) you are delivering the orders. </li>
+                                    <li><strong>Delivery Charge Methods </strong> :
+                                        <ol>
+                                            <li> <strong> Fixed Delivery Charges :</strong> In this method Fix delvery
+                                                charge will apply to
+                                                all orders</li>
+                                            <li><strong>Per KM Delivery Charges : </strong>In this method, On the basis
+                                                of distance from
+                                                customer to restaurant. FOr e.g. if distance is 10KM and charge is 5
+                                                Ruppies per Kilometer then final delivery charge will be = 10*5 = 50
+                                                Ruppies(Currency you will set in system) </li>
+                                            <li><strong>Range Wise Delivery Charges:</strong> In this method, you need
+                                                to set distance
+                                                range while adding the city. for e.g. 5-10 Kilometer and set price for
+                                                that distance. </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </ol>
+                        </p>
+                        <h3> Deliverable Area </h3>
+                        <p>
+                            <ol>
+                                <li>See all Cities points(coordinates) under Location->Deliverable Area Manu.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/manage-city.png">
+                                        <!-- media -->
+                                        <img src="assets/images/manage-city.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Add City points by drwing polygon or circle. that will the area in which you are
+                                    delivering the orders.</li>
+                                <ul>
+                                    <li>Select the city which ou want to set points</li>
+                                    <li>Draw the area you want to allow deliver.</li>
+                                    <li>You will get the selected area if you have already selected deliverable rea for
+                                        that perticular city. </li>
+                                    <li>If you want to change it then you can override the points and draw a new polygon
+                                        or circle.</li>
+                                </ul>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-18">
+                        <h2 class="section-heading">FAQ</h2>
+                        <p>
+                            <ol>
+                                <li>See all FAQ under FAQ Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/faq.png">
+                                        <!-- media -->
+                                        <img src="assets/images/faq.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-3-19">
+                        <h2 class="section-heading">System Users</h2>
+                        <p>
+                            <ol>
+                                <li>See all System Users under System Users Sections.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="assets/images/system-users.png">
+                                        <!-- media -->
+                                        <img src="assets/images/system-users.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Here Super admin can create other roles on system like editer,member etc.</li>
+                                <li>You can select read,update,delete and create operations.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <!--//section-->
+                </article>
+                <!--//docs-article-->
+
+                <article class="docs-article" id="section-3">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">APIs</h1>
+                        <section class="docs-intro">
+                            <p>
+                                refer <a href="https://erestro.me/api-doc.txt">https://erestro.me/api-doc.txt</a> for
+                                Customer Api Docs
+                            </p>
+                            <p>
+                                refer <a
+                                    href="https://erestro.me/partner-api-doc.txt">https://erestro.me/partner-api-doc.txt</a>
+                                for Restanurant Api Docs
+                            </p>
+                            <p>
+                                refer <a
+                                    href="https://erestro.me/rider-api-doc.txt">https://erestro.me/rider-api-doc.txt</a>
+                                for Rider Api Docs
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+
+                    <!--//section-->
+                </article>
+
+                <article class="docs-article" id="section-4">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Support</h1>
+                        <section class="docs-intro">
+                            <p>
+                                If you are facing any technical issues or challanges while using our system. You can
+                                contact us on skype.
+                                We are available for technical support from <strong> 9.00AM to 6.00PM Indian Standard
+                                    Time Monday
+                                    to Friday </strong>.
+                            </p>
+                            <h3>For Web or backend related issues contact here, </h3>
+                            <a href='skype:live:.cid.1a807eaff9133ee3'>Drop a Message on Skype</a> or Search this ID on
+                            Skype :.cid.1a807eaff9133ee3
+                            <br>
+                            <h3>And for mobile application related issues contact here, </h3>
+                            <a href='skype:live:harishvekariya100'>Drop a Message on Skype</a> or Search this ID on
+                            Skype :
+                            harishvekariya100
+                        </section>
+                    </header>
+                </article>
+                <article class="docs-article" id="section-7">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Auto Update</h1>
+                        <section class="docs-intro">
+                            <p>
+                                How to auto update your admin panel or web version to latest version?
+                            </p>
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        Note
+                                    </h4>
+                                    <p>If you are upgrading your from very old version then please update the system in
+                                        sequence one after the another. Don't skip any version in between.</p>
+                                </div>
+                            </div>
+                            <ol>
+                                <li>Find update from vX.X to vX.X.X.zip file from downloded PHP source code.You will
+                                    findfile on this <strong> location: eRestro/eRestro - PHP -
+                                        v1.0/Updates/your_required_version_update_file.zip</strong></li>
+                                <li>Visit https://Your_Domain/admin/updater</li>
+                                <li>You will see simple instructions, current version to latest version information and
+                                    "Update The System" button.</li>
+                                <li>Upload update.zip file.</li>
+                                <li>Click on that Update Button.</li>
+                                <li>That's all. You have successfully updated your system from older version to newer
+                                    one.</li>
+                            </ol>
+                        </section>
+                    </header>
+                </article>
+                <footer class="footer">
+                    <div class="container text-center py-5">
+                        <small class="copyright">Made with <3 by <a href="https://infinitietech.com/" target="_blank">
+                                Infinitietech</a></small><br>
+                        <small class="copyright">Thanks to <a href="https://themes.3rdwavemedia.com/"
+                                target="_blank">3rd Wave Media</a> for the elegant documentation template.</small>
+                        <!--//social-list-->
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

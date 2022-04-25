@@ -1,0 +1,511 @@
+/*
+	WRTeam Developers
+*/
+
+API URL -->> 
+	https://erestro.me/app/v1/api/{METHOD_NAME}  - (all APIs in one file only)
+
+---------------------------------------------------------------------------
+Defined API Methods:-
+---------------------------------------------------------------------------
+
+1. login
+2. update_fcm
+3. reset_password
+4. get_login_identity
+5. verify_user
+6. register_user
+7. update_user
+8. is_city_deliverable
+9. get_slider_images
+10. get_offer_images
+11. get_categories
+12. get_cities
+13. get_products
+14. validate_promo_code
+15. get_partners
+16. add_address
+17. update_address
+18. get_address
+19. delete_address
+20. get_settings
+21. place_order
+22. get_orders
+23. set_product_rating
+24. delete_product_rating
+25. get_product_rating
+26. manage_cart(Add/Update)
+27. get_user_cart
+28. add_to_favorites
+29. remove_from_favorites
+30. get_favorites
+31. get_notifications
+32. update_order_status
+33. add_transaction
+34. get_sections
+35. transactions
+36. delete_order
+37. get_ticket_types
+38. add_ticket
+39. edit_ticket
+40. send_message
+41. get_tickets
+42. get_messages
+43. set_rider_rating
+44. get_rider_rating
+45. delete_rider_rating
+46. get_faqs
+47. get_promo_codes
+48. remove_from_cart
+49. get_delivery_charges
+50. validate_refer_code
+
+Payment Method APIs
+    51. make_payments
+        -get_paypal_link
+        -paypal_transaction_webview
+        -app_payment_status
+        -ipn
+    52. stripe_webhook
+    53. generate_paytm_checksum
+    54. generate_paytm_txn_token
+    55. validate_paytm_checksum
+    56. flutterwave_webview
+    57. flutterwave_payment_response
+58. search_places
+59. get_live_tracking_details
+
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+Use POST method to pass the parameters
+
+1.login   
+        mobile: 9874565478
+        password: 12345678
+        fcm_id: FCM_ID
+
+2. update_fcm
+        user_id:12
+        fcm_id: FCM_ID
+
+3. reset_password
+        mobile_no:7894561235
+        new: pass@123 
+
+4. get_login_identity
+
+5. verify_user
+        mobile: 9874565478
+
+6. register_user
+        name:gk 
+        email:gurnanikaran67@gmail.com 
+        mobile:9874565478 
+        country_code:91 
+        referral_code:MY_CODE
+        password:password
+        fcm_id:YOUR_FCM_ID        {optional}
+        friends_code:45dsrwr      {optional}
+        latitude:66.89            {optional}
+        longitude:67.8            {optional} 
+
+7. update_user
+        user_id:34
+        username:hiten                 {optional}
+        mobile:7852347890              {optional}
+        email:amangoswami@gmail.com	   {optional}
+        address:Time Square	           {optional}
+        latitude:45.453	               {optional}
+        longitude:45.453	           {optional}
+        image:[]                       {optional}
+        city_id:1       	           {optional}
+        referral_code:Userscode        {optional}
+        old:12345                      {optional but if one param set then "new" will be mandatory}
+        new:345234
+
+8. is_city_deliverable
+        id:1    // {optional} 
+        name:bhuj  // {optional}
+
+9. get_slider_images
+        //To Get Slider Image
+        get_slider_images
+
+10. get_offer_images
+        //To Get Offer Images
+        get_offer_images  
+    
+11. get_categories
+
+        id:15               // optional
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:               id / name
+                            // { default -id } optional
+        order:DESC/ASC      // { default - DESC } optional
+
+12. get_cities
+        sort:               // { c.name / c.id } optional
+        order:DESC/ASC      // { default - ASC } optional
+        search:value        // {optional}
+        limit:10            // {pass default limit for city list}{default : 25}
+        offset:0            // {optional default :0}
+
+13. get_products
+
+        id:101              // optional
+        category_id:29      // optional
+        user_id:15          // optional
+        search:keyword      // optional   // search by    product name and highlights
+        tags:multiword tag1, tag2, another tag      // optional {search by restro and product tags}
+        highlights:multiword tag1, tag2, another tag      // optional
+        attribute_value_ids : 34,23,12 // { Use only for filteration } optional
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:p.id / p.date_added / pv.price
+                            { default - p.id } optional
+        order:DESC/ASC      // { default - DESC } optional
+        top_rated_foods: 1 // { default - 0 } optional
+        discount: 5             // optional
+        min_price:10000          // optional
+        max_price:50000          // optional
+        partner_id:1255           //{optional}
+        product_ids: 19,20             // optional
+        product_variant_ids: 44,45,40             // optional
+        vegetarian:1|2|3             //{optional -> 1 - veg | 2 - non-veg | 3 - Both}        filter_by:p.id|sd.user_id       // {p.id = product list | sd.user_id = partner list}            
+                             { default - sd.user_id } optional
+        latitude:123                 // {optional}
+        longitude:123                // {optional}
+
+14. validate_promo_code
+        promo_code:'NEWOFF10'
+        user_id:28
+        final_total:'300'
+
+15. get_partners
+        id:1      //{optional}
+        city_id:1  //{optional}
+        user_id:1  //{optional}
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort:p.id / p.date_added / pv.price
+                            { default - p.id } optional
+        order:DESC/ASC      // { default - DESC } optional
+        top_rated_partner: 1 // { default - 0 } optional
+        only_opened_partners: 1 // { default - 0 } optional
+        vegetarian:1|2|3             //{optional -> 1 - veg | 2 - non-veg | 3 - both}
+        latitude:123                 // {optional}
+        longitude:123                // {optional}
+
+16. add_address
+        user_id:1
+        mobile:9727800638
+        address:#123,Time Square Empire,bhuj 
+        city:1
+        latitude:1234
+        longitude:1234
+        area:umiya nagar
+        type:Home | Office | Others      {optional}
+        name:John Smith              {optional}
+        country_code:+91             {optional}
+        alternate_mobile:9876543210  {optional}
+        landmark:prince hotel        {optional}
+        pincode:370001               {optional}
+        state:Gujarat                {optional}
+        country:India                {optional}
+        is_default:1                 {optional}{default - 0}
+
+17. update_address
+        id:1
+        user_id:1                    {optional}
+        mobile:9727800638            {optional}
+        address:#123,Time Square,bhuj    {optional} 
+        city:1                    {optional}
+        type:Home | Office | Others      {optional}
+        name:John Smith              {optional}
+        country_code:+91             {optional}
+        alternate_mobile:9876543210  {optional}
+        landmark:prince hotel        {optional}
+        area:umiya nagar             {optional}
+        pincode:370001               {optional}
+        state:Gujarat                {optional}
+        country:India                {optional}
+        latitude:1234                {optional}
+        longitude:1234               {optional}
+        is_default:1                 {optional}{default - 0}
+
+18. get_address
+        user_id:3    
+        address_id:bhuj         {optional}  {if want to get only one address by id}
+        partner_id:1234     {optional}  {for delivery check}
+
+19. delete_address
+        id:3    
+        
+20. get_settings
+        type : payment_method | all // { default : all  } optional            
+        user_id:  15 { optional }
+
+21. place_order
+        user_id:5
+        mobile:9974692496
+        product_variant_id: 1,2,3
+        quantity: 3,3,1
+        total:60.0
+        delivery_charge:20.0
+        tax_amount:10
+        tax_percentage:10
+        final_total:55
+        latitude:40.1451
+        longitude:-45.4545
+        promo_code:NEW20                        {optional}
+        payment_method: Paypal / Payumoney / COD / PAYTM
+        address_id:17
+        is_wallet_used:1 {By default 0}
+        wallet_balance_used:1
+        active_status:pending {optional}
+        order_note:text      //{optional}
+        delivery_tip:text      //{optional}
+
+22. get_orders
+        user_id:101
+        id:123                  {order_id  optional}
+        active_status: pending  {pending,confirmed,preparing,out_for_delivery,delivered,cancelled}      // optional
+        limit:25            // { default - 25 } optional
+        offset:0            // { default - 0 } optional
+        sort: o.id / date_added // { default - o.id } optional
+        order:DESC/ASC      // { default - DESC } optional        
+        download_invoice:0 // { default - 0 } optional 
+
+23. set_product_rating
+        user_id: 21
+        product_id: 33
+        rating: 4.2
+        comment: 'Done' {optional}
+        images[]:[]
+
+24. delete_product_rating
+        rating_id:32
+
+25. get_product_rating 
+        product_id : 12
+        user_id : 1 		{optional}
+        limit:25                // { default - 25 } optional
+        offset:0                // { default - 0 } optional
+        sort: type   			// { default - type } optional
+        order:DESC/ASC          // { default - DESC } optional
+
+26. manage_cart(Add/Update)
+        Add/Update
+        user_id:2
+        product_variant_id:23
+        is_saved_for_later: 1 { default:0 }
+        qty:2 // pass 0 to remove qty
+        add_on_id:1           {optional}
+        add_on_qty:1          {required when passing add on id}
+
+27. get_user_cart
+        user_id:1
+        is_saved_for_later: 1 { default:0 }
+
+28. add_to_favorites
+        user_id:15
+        type:partners | products
+        type_id:60
+
+29. remove_from_favorites
+        user_id:15
+        type:partners | products  {optional}
+        type_id:60                   {optional}
+
+30. get_favorites
+        user_id:12
+        type:partners | products 
+        limit : 10 {optional}
+        offset: 0 {optional}
+
+31. get_notifications
+        sort: id / date_added // { default - id } optional
+        order:DESC/ASC      // { default - DESC } optional    
+        limit:10            // { default - 25 } {optional}
+        offset:0            // { default - 0 } {optional}
+
+32. update_order_status
+        status: cancelled
+        order_id:1201
+
+33. add_transaction
+        transaction_type : transaction / wallet  // { optional - default is transaction }
+        user_id : 15 
+        order_id:  23
+        type : COD / stripe / razorpay / paypal / paystack / flutterwave - for transaction | credit / debit - for wallet
+        payment_method:razorpay / paystack / flutterwave        // used for waller credit option, required when transaction_type - wallet and type - credit
+        txn_id : 201567892154 
+        amount : 450
+        status : success / failure
+        message : Done 
+
+34. get_sections
+        limit:10            // { default - 25 } {optional}
+        offset:0            // { default - 0 } {optional}
+        user_id:12              {optional}
+        section_id:4            {optional}
+        top_rated_foods: 1 // { default - 0 } optional
+        p_limit:10          // { default - 10 } {optional}
+        p_offset:10         // { default - 0 } {optional}    
+        p_sort:pv.price      // { default - pid } {optional}
+        p_order:asc         // { default - desc } {optional}
+        filter_by:p.id|sd.user_id       // {p.id = product list | sd.user_id = partner list}            
+                             { default - p.id } optional
+        //{response: indictor:"1"} 	0 - none | 1 - veg | 2 - non-veg
+        latitude:123                 // {optional}
+        longitude:123                // {optional}
+
+35. transactions
+        user_id:73 
+        id: 1001                // { optional}
+        transaction_type:transaction / wallet // { default - transaction } optional
+        type : COD / stripe / razorpay / paypal / paystack / flutterwave - for transaction | credit / debit - for wallet // { optional }
+        search : Search keyword // { optional }
+        limit:25                // { default - 25 } optional
+        offset:0                // { default - 0 } optional
+        sort: id / date_created // { default - id } optional
+        order:DESC/ASC          // { default - DESC } optional
+
+36. delete_order
+    order_id:1
+
+37. get_ticket_types
+
+38. add_ticket
+        ticket_type_id:1
+        subject:product_image not displying
+        email:test@gmail.com
+        description:its not showing images of products in web
+        user_id:1
+
+39. edit_ticket
+        ticket_id:1
+        ticket_type_id:1
+        subject:product_image not displying
+        email:test@gmail.com
+        description:its not showing attachments of products in web
+        user_id:1
+        status:3 or 5 [3 -> resolved, 5 -> reopened]
+        [1 -> pending, 2 -> opened, 3 -> resolved, 4 -> closed, 5 -> reopened]
+
+40. send_message
+        user_type:user
+        user_id:1
+        ticket_id:1	
+        message:test	
+        attachments[]:files  {optional} {type allowed -> image,video,document,spreadsheet,archive}
+
+41. get_tickets
+        ticket_id: 1001                // { optional}
+        ticket_type_id: 1001                // { optional}
+        user_id: 1001                // { optional}
+        status:   [1 -> pending, 2 -> opened, 3 -> resolved, 4 -> closed, 5 -> reopened]// { optional}
+        search : Search keyword // { optional }
+        limit:25                // { default - 25 } optional
+        offset:0                // { default - 0 } optional
+        sort: id | date_created | last_updated                // { default - id } optional
+        order:DESC/ASC          // { default - DESC } optional
+
+42. get_messages
+        ticket_id: 1001            
+        user_type: 1001                // { optional}
+        user_id: 1001                // { optional}
+        search : Search keyword // { optional }
+        limit:25                // { default - 25 } optional
+        offset:0                // { default - 0 } optional
+        sort: id | date_created | last_updated                // { default - id } optional
+        order:DESC/ASC          // { default - DESC } optional
+
+43. set_rider_rating
+        user_id: 21
+        rider_id: 33
+        rating: 4.2
+        comment: Done {optional}
+
+44. get_rider_rating  
+        rider_id : 12
+        user_id : 1 		{optional}
+        limit:25                // { default - 25 } optional
+        offset:0                // { default - 0 } optional
+        sort: u.id   			// { default - u.id } optional
+        order:DESC/ASC          // { default - DESC } optional
+
+45. delete_rider_rating
+        rating_id:32
+
+46. get_faqs
+
+47. get_promo_codes
+        search : Search keyword // { optional }
+        limit:25                // { default - 25 } optional
+        offset:0                // { default - 0 } optional
+        sort: id | date_created | last_updated                // { default - id } optional
+        order:DESC/ASC          // { default - DESC } optional
+
+48. remove_from_cart
+        user_id:2           
+        product_variant_id:23 {optional} //if not passed all items in the cart will be removed. 
+
+49. get_delivery_charges
+        user_id:1
+        address_id:1
+
+50. validate_refer_code
+        referral_code:USERS_CODE_TO_BE_VALIDATED
+
+51. get_paypal_link
+        user_id:73
+        order_id:11
+        amount:150
+
+52. stripe_webhook 
+        // Used by the Stripe webhook
+
+53. generate_paytm_checksum
+        order_id:1001
+        amount:1099
+        user_id:73              //{ optional } 
+        industry_type:Industry  //{ optional } 
+        channel_id:WAP          //{ optional }
+        website:website link    //{ optional }
+
+54. generate_paytm_txn_token
+        amount:100.00
+        order_id:102
+        user_id:73
+        industry_type:      //{optional}
+        channel_id:      //{optional}
+        website:      //{optional}
+
+55. validate_paytm_checksum
+        paytm_checksum:PAYTM_CHECKSUM
+        order_id:1001
+        amount:1099
+        user_id:73              //{ optional } 
+        industry_type:Industry  //{ optional } 
+        channel_id:WAP          //{ optional }
+        website:website link    //{ optional }
+
+56. flutterwave_webview
+        amount:100
+        user_id:73
+        reference:eShop-165232013-400  // { optional }
+
+57. flutterwave_payment_response
+
+58. search_places
+    input:string     {user typed input}
+
+59. get_live_tracking_details
+    order_id:1
+
+
+        

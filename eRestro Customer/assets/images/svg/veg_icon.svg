@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="veg_icon" transform="translate(-0.373 -0.132)">
+    <rect id="Rectangle_17284" data-name="Rectangle 17284" width="24" height="24" transform="translate(0.373 0.132)" fill="none"/>
+    <g id="Rectangle_98" data-name="Rectangle 98" transform="translate(0.373 0.132)" fill="none" stroke="#4fa110" stroke-width="1">
+      <rect width="24" height="24" stroke="none"/>
+      <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
+    </g>
+    <circle id="Ellipse_31" data-name="Ellipse 31" cx="7.2" cy="7.2" r="7.2" transform="translate(5.171 4.361)" fill="#4fa110"/>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+name: erestro
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  cached_network_image: ^3.1.0+1
+  http: ^0.13.3
+  #octo_image: ^1.0.0+1
+  flutter_svg: ^0.23.0+1
+  shared_preferences: ^2.0.9
+  #lottie: ^1.2.1
+  google_maps_flutter: ^2.1.1
+  intl: ^0.17.0
+  url_launcher: ^6.0.16
+  image: ^3.0.8
+
+  #firebaselogin
+  #firebase_auth: ^3.3.13 #^3.2.0
+  #firebase_core: ^1.14.0 #^1.10.0
+  firebase_auth: ^3.0.1
+  firebase_core: ^1.6.0
+  firebase_messaging: ^11.2.1
+  cloud_firestore: ^3.1.10
+  flutter_html: ^2.1.1
+  flutter_local_notifications: ^8.1.1+2
+  flutter_localizations:
+    sdk: flutter
+
+  #google places
+  rxdart: ^0.27.3
+  google_maps_webservice: ^0.0.20-nullsafety.0 #^0.0.19
+  google_api_headers: ^1.1.1
+  #curr location
+  geolocator: ^8.0.0 #geolocator: ^7.6.0
+  geocoding: ^2.0.1
+  location:
+
+  flutter_bloc: ^7.3.0
+  hive_flutter: ^1.0.0
+  hive: ^2.0.4
+  image_picker: ^0.8.0+1
+  internet_connection_checker: ^0.0.1+2
+  intl_phone_field: ^2.1.0
+  jaguar_jwt: ^3.0.0
+  launch_review: ^3.0.1
+  otp_autofill: ^2.1.0 #^1.1.0
+  sms_autofill: ^2.2.0
+  path_provider: ^2.0.2
+  pin_code_fields: ^7.3.0
+  webview_flutter: ^2.0.13
+  #google_mobile_ads: ^0.13.4
+  connectivity_plus: ^1.1.0
+  google_fonts: ^2.1.0
+  pin_input_text_field: ^4.1.1
+  permission_handler: ^8.3.0
+  provider: ^6.0.2
+  scrollable_list_tabview: ^0.2.0-nullsafety
+  vertical_scrollable_tabview: ^0.0.6
+  carousel_slider: ^4.0.0
+  share_plus: ^3.0.4
+  flutter_exif_rotation: ^0.4.1
+  mime_type: ^1.0.0
+  shimmer: ^2.0.0
+  flutter_rating_bar: ^4.0.0
+  #flutter_stripe: ^2.3.0
+  flutter_stripe: ^2.2.0
+  paytm: ^3.0.1
+  razorpay_flutter: ^1.2.7
+  flutter_paystack: ^1.0.5+1
+  flutter_html_to_pdf: ^0.7.0
+  open_file: ^3.2.1
+  new_version: ^0.3.0
+  flutter_downloader: ^1.7.1
+  file_picker: ^4.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^1.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/images/image/
+    - assets/images/image/0.75x/
+    - assets/images/image/1.0x/
+    - assets/images/image/1.5x/
+    - assets/images/image/2.0x/
+    - assets/images/image/3.0x/
+    - assets/images/image/4.0x/
+    - assets/images/svg/
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: assets/font/Quicksand-Regular.ttf
+        - asset: assets/font/Quicksand-Bold.ttf
+          weight: 700
+        - asset: assets/font/Quicksand-SemiBold.ttf
+          weight: 600
+        - asset: assets/font/Quicksand-Light.ttf
+          weight: 300
+        - asset: assets/font/Quicksand-Medium.ttf
+          weight: 500

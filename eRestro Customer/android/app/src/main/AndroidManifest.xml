@@ -1,0 +1,107 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wrteam.erestro">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+   <application
+        android:label="eRestro"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true">
+       <meta-data
+           android:name="com.google.firebase.messaging.default_notification_channel_id"
+           android:value="@string/default_notification_channel_id"/>
+        <activity
+            android:exported="true"
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <!-- Displays an Android View that continues showing the launch screen
+                 Drawable until Flutter paints its first frame, then this splash
+                 screen fades out. A splash screen is useful to avoid any visual
+                 gap between the end of Android's launch screen and the painting of
+                 Flutter's first frame. -->
+            <!--<meta-data
+              android:name="io.flutter.embedding.android.SplashScreenDrawable"
+              android:resource="@drawable/launch_background"
+              />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+       <provider
+           android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider"
+           android:authorities="${applicationId}.flutter_downloader.provider"
+           android:exported="false"
+           android:grantUriPermissions="true">
+           <meta-data
+               android:name="android.support.FILE_PROVIDER_PATHS"
+               android:resource="@xml/provider_paths"/>
+       </provider>
+
+       <!-- Begin FlutterDownloader customization -->
+       <!-- disable default Initializer -->
+       <provider
+           android:name="androidx.startup.InitializationProvider"
+           android:authorities="${applicationId}.androidx-startup"
+           android:exported="false"
+           tools:node="merge">
+           <meta-data
+               android:name="androidx.work.WorkManagerInitializer"
+               android:value="androidx.startup"
+               tools:node="remove" />
+       </provider>
+
+       <!-- declare customized Initializer -->
+       <provider
+           android:name="vn.hunghd.flutterdownloader.FlutterDownloaderInitializer"
+           android:authorities="${applicationId}.flutter-downloader-init"
+           android:exported="false">
+           <!-- changes this number to configure the maximum number of concurrent tasks -->
+           <meta-data
+               android:name="vn.hunghd.flutterdownloader.MAX_CONCURRENT_TASKS"
+               android:value="5" />
+       </provider>
+       <!-- End FlutterDownloader customization -->
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="YOUR_API_KEY_HERE"/>
+       <meta-data
+           android:name="com.google.android.gms.wallet.api.enabled"
+           android:value="true" />
+       <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+           android:exported="false">
+           <intent-filter>
+               <action android:name="android.intent.action.BOOT_COMPLETED"/>
+               <action android:name="android.intent.action.com.wrteam.erestro"/>
+           </intent-filter>
+       </receiver>
+    </application>
+</manifest>

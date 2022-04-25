@@ -1,0 +1,128 @@
+/*
+	WRTeam Developers
+*/
+
+API URL -->> 
+	https://erestro.me/rider/app/v1/api/{METHOD_NAME}  - (all APIs in one file only)
+
+---------------------------------------------------------------------------
+Defined API Methods:-
+---------------------------------------------------------------------------
+
+1. login
+2. get_rider_details
+3. get_orders
+4. get_fund_transfers
+5. update_user
+6. update_fcm
+7. reset_password
+8. verify_user
+9. get_settings
+10. send_withdrawal_request
+11. get_withdrawal_request
+12. update_order_status
+13. get_pending_orders
+14. update_order_request
+15. get_rider_cash_collection
+16. manage_live_tracking 
+17. delete_live_tracking
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+
+Use POST method to pass the parameters
+
+1.login
+    mobile: 9874565478
+    password: 12345678
+    fcm_id: FCM_ID //{ optional } 
+
+2. get_rider_details
+    id:15
+
+3. get_orders
+    user_id:101
+    active_status: pending  {pending,confirmed,preparing,out_for_delivery,delivered,cancelled}      // optional
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort: id / date_added // { default - id } optional
+    order:DESC/ASC      // { default - DESC } optional
+
+4. get_fund_transfers
+    user_id:101
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort: id / date_added // { default - id } optional
+    order:DESC/ASC      // { default - DESC } optional
+
+5. update_user
+    user_id:34
+    username:hiten
+    mobile:7852347890                {optional}
+    email:amangoswami@gmail.com	     {optional}
+    address:address	                 {optional}
+    old:12345
+    new:345234
+    status:1 or 0                    {optional}{Default:1}
+
+6. update_fcm
+    user_id:12
+    fcm_id: FCM_ID
+
+7. reset_password
+    mobile_no:7894561235            
+    new: pass@123
+
+8. verify_user
+    mobile:1234567890
+    email:test@gmail.com // { optional }
+
+9. get_settings
+    type : rider_privacy_policy / rider_terms_conditions
+
+10. send_withdrawal_request
+    user_id:15
+    payment_address: 12343535
+    amount: 560
+
+11. get_withdrawal_request
+    user_id:15
+    limit:10
+    offset:10
+
+12. update_order_status
+    rider_id:12
+    order_id: 137
+    status: confirmed                 {confirmed|preparing|out_for_delivery|delivered|cancelled}  
+    otp:value      //{required when status is delivered}
+
+13. get_pending_orders
+    user_id:101           // {rider_id}
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort: id / date_added // { default - id } optional
+    order:DESC/ASC      // { default - DESC } optional
+
+14. update_order_request
+    rider_id:12
+    order_id: 137
+    accept_order:1     {1: accept_order | 0: reject order}
+
+15. get_rider_cash_collection
+    rider_id:15  
+    status:             // {rider_cash (rider collected) | rider_cash_collection (admin collected)}
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort:               // { id } optional
+    order:DESC/ASC      // { default - DESC } optional
+    search:value        // {optional} 
+
+16. manage_live_tracking (pass this data if ts update or insert operation)
+    order_id: 137
+    order_status:out_for_delivery
+    latitude:12345678
+    longitude:14654654
+
+17. delete_live_tracking
+    order_id: 137

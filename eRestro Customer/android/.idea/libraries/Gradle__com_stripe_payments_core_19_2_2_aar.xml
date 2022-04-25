@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.stripe:payments-core:19.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f98d3ff434d3f24bdf78936f38d02194/transformed/jetified-payments-core-19.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f98d3ff434d3f24bdf78936f38d02194/transformed/jetified-payments-core-19.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f98d3ff434d3f24bdf78936f38d02194/transformed/jetified-payments-core-19.2.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.stripe/payments-core/19.2.2/a1296c4e1f6ebeaf18506dfa365bb661d57de410/payments-core-19.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,395 @@
+/*
+	Infinitie Developers
+*/
+
+API URL -->> 
+	https://erestro.me/partner/app/v1/api/{METHOD_NAME}  - (all APIs in one file only)
+
+---------------------------------------------------------------------------
+Defined API Methods:-
+---------------------------------------------------------------------------
+
+1. login
+2  get_orders
+3. update_order_status
+4. get_categories
+5. get_products
+6. get_customers
+7. get_transactions
+8. get_statistics
+9. forgot_password
+10. delete_order
+11. verify_user
+12. get_settings
+13. update_fcm
+14. get_cities
+15. get_taxes
+16. send_withdrawal_request
+17. get_withdrawal_request
+18. add_attributes
+19. edit_attributes
+20. get_attributes
+21. get_attribute_values
+22. add_products
+23. get_media
+24. get_partner_details
+25. update_partner
+26. delete_product
+27. update_products
+28. get_riders
+29. reset_password
+30. get_tags
+31. add_tags
+32. delete_tag
+33. upload_media
+34. get_product_add_ons
+35. update_add_ons
+36. delete_add_on
+37. get_product_tags
+38. update_product_status
+
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+
+Use POST method to pass the parameters
+
+1.login
+    mobile: 9988776655
+    password: 12345678
+    fcm_id: FCM_ID //{ optional }
+
+2. get_orders
+    partner_id:174 
+    id:101 { optional }
+    user_id:101 { optional }
+    start_date : 2020-09-07 or 2020/09/07 { optional }
+    end_date : 2021-03-15 or 2021/03/15 { optional }
+    search:keyword      // optional
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort: id / date_added // { default - id } optional
+    order:DESC/ASC      // { default - DESC } optional
+    active_status: pending  {pending,confirmed,preparing,out_for_delivery,delivered,cancelled}     // optional
+
+3. update_order_status
+    partner_id:12
+    order_id: 137
+    deliver_by:rider_id        {optional}
+    status: confirmed                 {pending|confirmed|preparing|out_for_delivery|delivered|cancelled}  
+
+4. get_categories
+
+5. get_products
+    partner_id:175
+    id:101              // optional
+    category_id:29      // optional
+    user_id:15          // optional
+    search:keyword      // optional   // search by product name and highlights and tags
+    tags:multiword tag1, tag2, another tag      // optional {search by restro and product tags}
+    highlights:multiword tag1, tag2, another tag      // optional
+    attribute_value_ids : 34,23,12 // { Use only for filteration } optional
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort:p.id / p.date_added / pv.price
+                        { default - p.id } optional
+    order:DESC/ASC      // { default - DESC } optional
+    top_rated_product: 1 // { default - 0 } optional
+    discount: 5             // optional
+    min_price:10000          // optional
+    max_price:50000          // optional
+    product_ids: 19,20             // optional
+    product_variant_ids: 44,45,40             // optional
+    vegetarian:1|2             //{optional -> 1 - veg | 2 - non-veg}
+    filter_by:p.id|sd.user_id       // {p.id = product list | sd.user_id = partner list}            
+                             { default - sd.user_id } optional
+    flag:low/sold      // optional
+    show_only_active_products:false { default - false } optional
+
+6. get_customers
+    partner_id:175
+    id: 1001                // { optional}
+    search : Search keyword // { optional }
+    limit:25                // { default - 25 } optional
+    offset:0                // { default - 0 } optional
+    sort: id/username/email/mobile/area_name/city_name/date_created // { default - id } optional
+    order:DESC/ASC          // { default - DESC } optional
+
+7. get_transactions
+    user_id:73             
+    id: 1001                // { optional}
+    type : credit / debit - for wallet // { optional }
+    search : Search keyword // { optional }
+    limit:25                // { default - 25 } optional
+    offset:0                // { default - 0 } optional
+    sort: id / date_created // { default - id } optional
+    order:DESC/ASC          // { default - DESC } optional
+
+8. get_statistics
+    partner_id:174
+
+9. forgot_password
+    mobile_no:7894561235            
+    new: pass@123
+
+10. delete_order
+    order_id:1
+
+11. verify_user
+    mobile: 9874565478
+    email: test@gmail.com // { optional }
+
+12. get_settings
+    user_id:  15 { optional }
+
+13. update_fcm
+    user_id:12
+    fcm_id: FCM_ID
+
+14. get_cities
+    sort:               // { c.name / c.id } optional
+    order:DESC/ASC      // { default - ASC } optional
+    search:value        // {optional} 
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+
+15. get_taxes
+
+16. send_withdrawal_request
+    user_id:174
+    payment_address: 12343535
+    amount: 56
+
+17. get_withdrawal_request
+    user_id:15  
+    limit:10  {optional}
+    offset:10  {optional}
+
+18. add_attributes
+    name:color 
+    attribute_values:[{"value":"value1"},{"value":"value2"},{"value":"value3"}]       //{JSON ARRAY- index(value) must be same}
+
+19. edit_attributes
+    edit_attribute_id:1
+    attribute_value_ids:1,2,3,0         // {provide zero if any new value added in edited attribute}
+    name:color 
+    value_name:red,blue,green,new_value   // {provide new attribute value if new added in edited attribute}
+
+20. get_attributes
+    sort: name              // { name / id } optional
+    order:DESC/ASC      // { default - ASC } optional
+    search:value        // {optional} 
+    limit:10  {optional}
+    offset:10  {optional}
+
+21. get_attribute_values
+    attribute_id:1  // {optional}
+    sort:a.name               // { a.name / a.id } optional
+    order:DESC/ASC      // { default - ASC } optional
+    search:value        // {optional} 
+    limit:10  {optional}
+    offset:10  {optional}
+
+22. add_products
+    pro_input_name: product name
+    partner_id:1255
+    product_category_id:99
+    short_description: description
+    product_add_ons:  [{"title":"add_on1","description":"descritpion","price":"40","calories":"123","status":1},{"title":"add_on2","description":"description2","price":"43","calories":"1234","status":1}]
+    tags:1,2,3                               //{pass Tag Ids comma saprated}
+    pro_input_tax:tax_id                     {optional -> pass zero if no tax}
+    is_prices_inclusive_tax:0                //{1: inclusive | 0: exclusive}
+    cod_allowed:1                            //{ 1:allowed | 0:not-allowed }{default:1}
+    is_cancelable:1                          //{optional}{1:cancelable | 0:not-cancelable}{default:0}
+    cancelable_till:pending                  //{pending,confirmed,preparing,out_for_delivery}{required if "is_cancelable" is 1}
+    pro_input_image:file  
+    indicator:1                              //{ 0 - none | 1 - veg | 2 - non-veg }
+    highlights:new,fresh                     //{optional}
+    calories:123                             //{optional}
+    total_allowed_quantity:100               //{optional}
+    minimum_order_quantity:12
+    quantity_step_size:1
+    attribute_values:1,2,3,4,5               //{comma saprated attributes values ids if set}
+    --------------------------------------------------------------------------------
+    till above same params
+    --------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    common param for simple and variable product
+    --------------------------------------------------------------------------------          
+    product_type:simple_product | variable_product  
+    variant_stock_level_type:product_level
+    
+    if(product_type == variable_product):
+        variants_ids:3 5,4 5,1 2
+        variant_price:100,200
+        variant_special_price:90,190
+        variant_images:files              //{optional}
+
+        total_stock_variant_type:100     //{if (variant_stock_level_type == product_level)}
+        variant_status:1                 //{if (variant_stock_level_type == product_level)}
+
+    if(product_type == simple_product):
+        simple_product_stock_status:null|0|1   {1=in stock | 0=out stock}
+        simple_price:100
+        simple_special_price:90
+        product_total_stock:100             {optional}
+        variant_stock_status: 0             {optional}//{0 =>'Simple_Product_Stock_Active' 1 => "Product_Level"	}
+        variant_status:1
+
+23. get_media
+    partner_id:1255            // {optional}
+    limit:25            // { default - 25 } optional
+    offset:0            // { default - 0 } optional
+    sort:               // { id } optional
+    order:DESC/ASC      // { default - DESC } optional
+    search:value        // {optional} 
+    type:image          // {documents,spreadsheet,archive,video,audio,image}
+
+24. get_partner_details
+    id:28
+
+25. update_partner(this will use for register and update profile)
+        id:34                                 {partner_id}(pass when update profile)
+    restro details:
+        partner_name:asd   
+        type:1                                {1:veg | 2:non-Veg | 3:Both}
+        profile:file                          // {pass if want to change}
+        status:1                              {1:active | 0: deactive} (when register -> pass status:2 ( Not-Approved))
+        city_id:1  
+        cooking_time:20                       {in minutes}   
+        working_time:[{"day":"Sunday","opening_time":"11:02:00","closing_time":"22:04:00","is_open":1},{"day":"Tuesday","opening_time":"19:20","closing_time":"18:21","is_open":1}]
+        address: restro address
+        address_proof:file                    // {pass if want to change}
+        latitude:123464
+        longitude:234535
+        gallary:multiple images from media    {optional}
+        description:asd                       {optional}
+        restro_tags:1,2,3                     {optional}  {tag_ids comma saprated}
+
+    restro owner details
+        name:asd
+        mobile:123456789
+        email:asd@gmail.com
+        password:password               // {pass if restro register}
+        old:12345                       //{if want to change password}
+        new:345234                      //{if want to change password}
+        national_identity_card:file     // {pass if want to change}
+        tax_name:GST
+        tax_number:GSTIN4565
+        account_number:sdfv             {optional}
+        account_name:asd                {optional}
+        bank_code:ASD                   {optional}
+        bank_name:sdf                   {optional}
+        pan_number:ad                   {optional}
+
+26. delete_product
+    product_id:28
+
+27. update_products
+    edit_product_id:74
+    edit_variant_id:104,105
+    variants_ids: new created with new attributes added
+
+    pro_input_name: product name
+    partner_id:1255
+    product_category_id:99
+    short_description: description
+    product_add_ons:  [{"title":"add_on1","description":"descritpion","price":"40","calories":"123","status":1},{"title":"add_on2","description":"description2","price":"43","calories":"1234","status":1}]
+    tags:1,2,3                               //{pass Tag Ids comma saprated}
+    pro_input_tax:tax_id                     {optional -> pass zero if no tax}
+    is_prices_inclusive_tax:0                //{1: inclusive | 0: exclusive}
+    cod_allowed:1                            //{ 1:allowed | 0:not-allowed }{default:1}
+    is_cancelable:1                          //{optional}{1:cancelable | 0:not-cancelable}{default:0}
+    cancelable_till:pending                  //{pending,confirmed,preparing,out_for_delivery}{required if "is_cancelable" is 1}
+    pro_input_image:file  
+    indicator:1                              //{ 0 - none | 1 - veg | 2 - non-veg }
+    highlights:new,fresh                     //{optional}
+    calories:123                             //{optional}
+    total_allowed_quantity:100               //{optional}
+    minimum_order_quantity:12
+    quantity_step_size:1
+    attribute_values:1,2,3,4,5               //{comma saprated attributes values ids if set}
+    --------------------------------------------------------------------------------
+    till above same params
+    --------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+    common param for simple and variable product
+    --------------------------------------------------------------------------------          
+    product_type:simple_product | variable_product  
+    variant_stock_level_type:product_level
+    
+    if(product_type == variable_product):
+        variants_ids:3 5,4 5,1 2
+        variant_price:100,200
+        variant_special_price:90,190
+        variant_images:files              //{optional}
+
+        total_stock_variant_type:100     //{if (variant_stock_level_type == product_level)}
+        variant_status:1                 //{if (variant_stock_level_type == product_level)}
+
+    if(product_type == simple_product):
+        simple_product_stock_status:null|0|1   {1=in stock | 0=out stock}
+        simple_price:100
+        simple_special_price:90
+        product_total_stock:100             {optional}
+        variant_stock_status: 0             {optional}//{0 =>'Simple_Product_Stock_Active' 1 => "Product_Level"	}
+        variant_status:1
+
+28. get_riders
+    partner_id:1255
+    id: 1001                // { optional}
+    search : Search keyword // { optional }
+    limit:25                // { default - 25 } optional
+    offset:0                // { default - 0 } optional
+    sort: id/username/email/mobile/area_name/city_name/date_created // { default - id } optional
+    order:DESC/ASC          // { default - DESC } optional
+
+29. reset_password
+    mobile_no:7894561235            
+    new: pass@123
+
+30. get_tags
+    partner_id:1  // {optional}
+    sort:a.name               // { a.name / a.id } optional
+    order:DESC/ASC      // { default - ASC } optional
+    search:value        // {optional} 
+    limit:10  {optional}
+    offset:10  {optional}
+
+31. add_tags (add/update)
+    partner_id:1 
+    title:tag1
+    tag_id:tag_id  {optional} {pass when update tag}
+
+32. delete_tag
+    partner_id:1
+    tag_id:1
+
+33. upload_media
+    partner_id:1
+    documents[]:FILES
+
+34. get_product_add_ons
+    product_id:10
+
+35. update_add_ons
+    add_on_id: 36                //{optional} {pass when need to update}
+    title: add_on1
+    product_id: 29
+    description: descritpion
+    price: 40.00
+    calories: 123.00
+    status:1 | 0                 //{1:active | 0:deactivate}
+
+36. delete_add_on
+    add_on_id: 1
+
+37. get_product_tags
+    product_id:10
+
+38. update_product_status
+    product_id:10
+    status:1     {1: active | 0: de-active}
+
+

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.paytm.appinvokesdk:appinvokesdk:1.6.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/eeb80ca87ae95d56d8e590623099bc0f/transformed/jetified-appinvokesdk-1.6.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/eeb80ca87ae95d56d8e590623099bc0f/transformed/jetified-appinvokesdk-1.6.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/eeb80ca87ae95d56d8e590623099bc0f/transformed/jetified-appinvokesdk-1.6.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

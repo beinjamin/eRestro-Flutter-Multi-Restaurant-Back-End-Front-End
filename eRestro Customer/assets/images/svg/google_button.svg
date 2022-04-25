@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="google_button" transform="translate(-241 -586)">
+    <g id="Group_6188" data-name="Group 6188">
+      <rect id="Rectangle_268" data-name="Rectangle 268" width="54" height="54" rx="27" transform="translate(241 586)" fill="#fff"/>
+      <g id="google_icon" transform="translate(43.191 0.189)">
+        <g id="super_g" data-name="super g">
+          <path id="Shape" d="M18.315,7.665l4.038-3.949A13.747,13.747,0,0,0,12.783,0,14.3,14.3,0,0,0,0,7.888L4.627,11.48a8.648,8.648,0,0,1,8.156-5.946h0a7.93,7.93,0,0,1,5.532,2.131Z" transform="translate(211.526 598.499)" fill="#ea4335"/>
+          <path id="Shape-2" data-name="Shape" d="M13.433,0H0V5.311H7.886A6.993,6.993,0,0,1,4.96,9.953l4.515,3.5a13.989,13.989,0,0,0,3.249-4.81A13.989,13.989,0,0,0,13.74,2.925h0A12.257,12.257,0,0,0,13.433,0Z" transform="translate(224.309 610.203)" fill="#4285f4"/>
+          <path id="Shape-3" data-name="Shape" d="M5.692,6.422a9.256,9.256,0,0,1,.461-2.83L1.526,0a14.278,14.278,0,0,0,0,12.846L6.17,9.252a8.8,8.8,0,0,1-.478-2.83Z" transform="translate(210 606.387)" fill="#fbbc05"/>
+          <path id="Shape-4" data-name="Shape" d="M22.241,8.013l-4.515-3.5a8.468,8.468,0,0,1-4.96,1.431,8.614,8.614,0,0,1-5.03-1.658A8.614,8.614,0,0,1,4.627,0L0,3.594A14.274,14.274,0,0,0,5.263,9.349a14.274,14.274,0,0,0,7.5,2.13,13.637,13.637,0,0,0,9.478-3.466Z" transform="translate(211.543 615.639)" fill="#34a853"/>
+          <path id="Shape-5" data-name="Shape" d="M28.617,0V28.617H0V0Z" transform="translate(210 598.502)" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

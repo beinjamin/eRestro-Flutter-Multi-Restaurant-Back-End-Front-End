@@ -1,0 +1,5 @@
+<svg id="set_link_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_1263" data-name="Rectangle 1263" width="24" height="24" fill="none"/>
+  <path id="Path_2572" data-name="Path 2572" d="M15,10.7a3.5,3.5,0,0,0,5.275.378l2.1-2.1a3.5,3.5,0,1,0-4.947-4.947l-1.2,1.2" transform="translate(-4.955 2.106)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="Path_2573" data-name="Path 2573" d="M11.392,14.9a3.5,3.5,0,0,0-5.275-.378l-2.1,2.1a3.5,3.5,0,1,0,4.947,4.947l1.2-1.2" transform="translate(2.125 -4.138)" fill="none" stroke="#2c272e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>
